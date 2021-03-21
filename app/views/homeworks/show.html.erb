@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Speciality:</strong>
+  <%= @homework.speciality %>
+</p>
+
+<p>
+  <strong>Course name:</strong>
+  <%= @homework.course_name %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @homework.question %>
+</p>
+
+<p>
+  <strong>Submission deadline:</strong>
+  <%= @homework.submission_deadline %>
+</p>
+
+<%= link_to 'Edit', edit_homework_path(@homework) %> |
+<%= link_to 'Back', homeworks_path %>
