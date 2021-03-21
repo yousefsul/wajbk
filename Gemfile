@@ -4,8 +4,10 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
-
+# object-document mapper (ODM) for MongoDB in Ruby
+gem 'mongoid', '~> 7.0.5'
+# authentication library for Rails
+gem 'devise', '~> 4.7', '>= 4.7.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.7'
 # Use Puma as the app server
