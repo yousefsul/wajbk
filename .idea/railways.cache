@@ -1,4 +1,12 @@
                   Prefix Verb   URI Pattern                    Controller#Action
+               homeworks GET    /homeworks(.:format)           homeworks#index
+                         POST   /homeworks(.:format)           homeworks#create
+            new_homework GET    /homeworks/new(.:format)       homeworks#new
+           edit_homework GET    /homeworks/:id/edit(.:format)  homeworks#edit
+                homework GET    /homeworks/:id(.:format)       homeworks#show
+                         PATCH  /homeworks/:id(.:format)       homeworks#update
+                         PUT    /homeworks/:id(.:format)       homeworks#update
+                         DELETE /homeworks/:id(.:format)       homeworks#destroy
         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
             user_session POST   /users/sign_in(.:format)       devise/sessions#create
     destroy_user_session DELETE /users/sign_out(.:format)      devise/sessions#destroy

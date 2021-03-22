@@ -1,24 +1,22 @@
 <p id="notice"><%= notice %></p>
+<table class="table table-hover table-dark ">
 
-<p>
-  <strong>Speciality:</strong>
-  <%= @homework.speciality %>
-</p>
+  <thead>
+  <tr>
+    <th scope="col"><strong>Speciality:</strong></th>
+    <th scope="col"><strong>Course name:</strong></th>
+    <th scope="col"><strong>Question:</strong></th>
+    <th scope="col"><strong>Submission deadline:</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><%= @homework.speciality %></td>
+    <td><%= @homework.course_name %></td>
+    <td><%= @homework.question %></td>
+    <td><%= @homework.submission_deadline %></td>
+  </tr>
+  </tbody>
+</table>
 
-<p>
-  <strong>Course name:</strong>
-  <%= @homework.course_name %>
-</p>
-
-<p>
-  <strong>Question:</strong>
-  <%= @homework.question %>
-</p>
-
-<p>
-  <strong>Submission deadline:</strong>
-  <%= @homework.submission_deadline %>
-</p>
-
-<%= link_to 'Edit', edit_homework_path(@homework) %> |
 <%= link_to 'Back', homeworks_path %>

@@ -11,27 +11,52 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :speciality %>
-    <%= form.text_field :speciality, id: :homework_speciality %>
+
+  <div class="input-group mb-4">
+    <%= form.text_field :speciality,
+                        id: :homework_speciality,
+                        class: "form-control",
+                        placeholder:"Speciality" %>
+    <%= form.text_field :course_name,
+                        id: :homework_course_name,
+                        class: "form-control",
+                        placeholder:"Course Name" %>
+  </div>
+
+
+  <div class="field form-group">
+    <%= form.text_area :question,
+                       id: :homework_question,
+                       class:"form-control mb-4 p-5 text-center",
+                       placeholder: "Write Your HomeWork" %>
+  </div>
+
+
+  <div class="field form-group">
+    <%= form.text_field :homework_status,
+                        id: :homework_homework_status,
+                        placeholder: "Homework Status",
+                        class: "form-control text-center border border-dark mb-4",
+                        readonly: true %>
   </div>
 
   <div class="field">
-    <%= form.label :course_name %>
-    <%= form.text_field :course_name, id: :homework_course_name %>
+    <%= form.text_field :payment_status,
+                        id: :homework_payment_status,
+                        placeholder: "Payment Status",
+                        class: "form-control text-center border border-dark mb-4",
+                        readonly: true %>
   </div>
 
-  <div class="field">
-    <%= form.label :question %>
-    <%= form.text_area :question, id: :homework_question %>
-  </div>
-
-  <div class="field">
+  <div class="text-center mb-4">
+  <div class="field form-group text-light bg-dark">
     <%= form.label :submission_deadline %>
-    <%= form.date_select :submission_deadline, id: :homework_submission_deadline %>
+    <%= form.date_select :submission_deadline,class: "form-control", id: :homework_submission_deadline %>
+  </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions text-center">
+    <%= form.submit "Add Homework",class: "btn btn-dark" %>
   </div>
 <% end %>
+

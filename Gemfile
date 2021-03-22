@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'activestorage'
+
 # object-document mapper (ODM) for MongoDB in Ruby
 gem 'mongoid', '~> 7.0.5'
 # authentication library for Rails

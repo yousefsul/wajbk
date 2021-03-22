@@ -22,6 +22,7 @@ class HomeworksController < ApplicationController
   # POST /homeworks or /homeworks.json
   def create
     @homework = Homework.new(homework_params)
+    @homework.user = current_user
 
     respond_to do |format|
       if @homework.save
@@ -64,6 +65,6 @@ class HomeworksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def homework_params
-      params.require(:homework).permit(:speciality, :course_name, :question, :submission_deadline)
+      params.require(:homework).permit(:speciality, :course_name, :question, :homework_status, :submission_deadline, :payment_status)
     end
 end
